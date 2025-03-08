@@ -7,7 +7,7 @@ export const containerStyles = tv(
     base: "mx-auto w-full",
     variants: {
       variant: {
-        default: "max-w-base",
+        default: "max-w-base px-8 xl:px-0",
       },
     },
     defaultVariants: {

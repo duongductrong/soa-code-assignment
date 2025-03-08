@@ -25,38 +25,34 @@ const TitreBloc2 = (props: TitreBloc2Props) => {
         {...props}
         className={cn("py-15 min-h-[986px]", props.className)}
       >
-        <BlocTitle
-          title="Our Activities"
-          subtitle={
-            <div className="mt-2 flex items-center gap-5 py-2">
-              <Button
-                variant="outline"
-                corner="full"
-                className="bg-[#FAFAFA] border-card"
-              >
-                <MountainIcon className="size-7 mr-2" />
-                Online Classes
-              </Button>
-              <Button
-                variant="outline"
-                corner="full"
-                className="bg-[#FAFAFA] border-card"
-              >
-                <FishingIcon className="size-7 mr-2" />
-                Ethical Hunting
-              </Button>
-              <Button
-                variant="outline"
-                corner="full"
-                className="bg-[#FAFAFA] border-card"
-              >
-                <CrosshairIcon className="size-7 mr-2" />
-                Gastronomic Experiences
-              </Button>
-            </div>
-          }
-          className="mb-6 relative z-[5]"
-        />
+        <BlocTitle title="Our Activities" className="mb-6 relative z-[5]" />
+
+        <div className="mt-2 flex flex-wrap justify-center items-center gap-5 mb-6 lg:py-2">
+          <Button
+            variant="outline"
+            corner="full"
+            className="bg-[#FAFAFA] border-card w-fit"
+          >
+            <MountainIcon className="size-7 mr-2" />
+            Online Classes
+          </Button>
+          <Button
+            variant="outline"
+            corner="full"
+            className="bg-[#FAFAFA] border-card w-fit"
+          >
+            <FishingIcon className="size-7 mr-2" />
+            Ethical Hunting
+          </Button>
+          <Button
+            variant="outline"
+            corner="full"
+            className="bg-[#FAFAFA] border-card w-fit"
+          >
+            <CrosshairIcon className="size-7 mr-2" />
+            Gastronomic Experiences
+          </Button>
+        </div>
 
         <BlocMap />
       </Container>

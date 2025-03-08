@@ -26,7 +26,7 @@ const BlocCard1 = ({
         src={image}
         loading="lazy"
         alt="case-img-1"
-        className="h-[397px] object-cover"
+        className="h-[200px] md:h-[235px] lg:h-[355px] xl:h-[397px] object-cover rounded-lg"
       />
       <div className="flex flex-col items-start gap-y-1">
         <p className="text-card text-center font-sans text-xl font-medium leading-normal mb-1">

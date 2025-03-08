@@ -30,7 +30,7 @@ const FrontageHeader = (_props: Props) => {
           LOGO SAMPLE
         </p>
 
-        <div className="flex items-center gap-6 grow">
+        <div className="flex items-center gap-6 grow hidden lg:flex">
           {menuItems.map((item) => (
             <p
               key={item.id}
@@ -44,7 +44,7 @@ const FrontageHeader = (_props: Props) => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="items-center gap-4 hidden lg:flex">
           <MountainIcon className="size-7 text-[#F0F0F0]" />
           <FishingIcon className="size-7 text-[#F0F0F0]" />
           <CrosshairIcon className="size-7" />

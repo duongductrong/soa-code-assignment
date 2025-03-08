@@ -62,9 +62,9 @@ const OurExperiences = (props: OurExperiencesProps) => {
           />
         </div>
 
-        <div className="flex gap-10">
+        <div className="flex flex-wrap gap-10 px-8 lg:px-0">
           {experiences.map((experience) => (
-            <div key={experience.title} className="flex-1 text-center">
+            <div key={experience.title} className="flex-1 text-center px-8 lg:px-0">
               <IconButton size="lg" className="mb-4" color="turquoise">
                 {experience.icon}
               </IconButton>

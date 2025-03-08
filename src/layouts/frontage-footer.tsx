@@ -31,15 +31,15 @@ const FrontageFooter = (props: FrontageFooterProps) => {
       </section>
       <section className="bg-brand py-14">
         <Container className="flex flex-col gap-14">
-          <div className="grid grid-cols-12 gap-24">
-            <div className="col-span-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24">
+            <div className="col-span-1 lg:col-span-4">
               <p className="text-white font-sans text-lg font-normal">
                 BASIC <br /> (514) 904-6789 <br />
                 Quebec, 3100 Boulevard de la Côte-Vertu
               </p>
             </div>
 
-            <div className="col-span-2 flex flex-col gap-1.5">
+            <div className="col-span-1 lg:col-span-2 flex flex-col gap-1.5">
               <p className="text-white/60 font-sans text-lg font-normal">
                 Activité 1
               </p>
@@ -50,7 +50,7 @@ const FrontageFooter = (props: FrontageFooterProps) => {
                 Activité 1
               </p>
             </div>
-            <div className="col-span-2 flex flex-col gap-1.5">
+            <div className="col-span-1 lg:col-span-2 flex flex-col gap-1.5">
               <p className="text-white/60 font-sans text-lg font-normal">
                 Activité 1
               </p>
@@ -61,7 +61,7 @@ const FrontageFooter = (props: FrontageFooterProps) => {
                 Activité 1
               </p>
             </div>
-            <div className="col-span-2 flex flex-col gap-1.5">
+            <div className="col-span-1 lg:col-span-2 flex flex-col gap-1.5">
               <p className="text-white/60 font-sans text-lg font-normal">
                 Activité 1
               </p>

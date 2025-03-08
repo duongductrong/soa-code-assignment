@@ -18,7 +18,7 @@ const TitreBloc1 = (props: TitreBloc1Props) => {
         className="mb-10"
       />
 
-      <div className="flex gap-6">
+      <div className="flex flex-col md:flex-row gap-8 xl:gap-6">
         {blocs.map((bloc, index) => {
           return (
             <BlocCard1
@@ -45,7 +45,7 @@ const blocs = [
     description:
       "Chaque sentier vous conduit à des panoramas époustouflants, chaque instant devient une aventure, chaque rencontre vous promet un so uvenir marquant. Avec MITIK, le tourisme d’aventure allie nature brute et confort raffiné à toutes les saisons. Randonnée, canoë, observation de la faune, rencontres culturelles, exploration en montagne, chaque escapade est une immersion inoubliable dans les grands espaces canadiens. ",
     button: "Forfait 1",
-    className: "transform-gpu translate-y-11",
+    className: "transform-gpu md:translate-y-11",
   },
   {
     image: "/assets/images/case-img-2.webp",
@@ -62,7 +62,7 @@ const blocs = [
     description:
       "BASIC vous guide à travers des territoires authentiques, où la chasse est une quête de respect et de sens. Accompagné par des experts passionnés, découvrez plusieurs types d’expériences de chasse où l’essentiel réside dans la connexion avec la nature, une saine gestion des territoires et de leurs habitats. Ours noir, orignal, cerf de Virginie (chevreuil), petits gibiers sont au menu et ce, tant au sein de séjours de chasse traditionnel que lors d’expériences uniques en symbiose avec l’environnement et les traditions millénaires. ",
     button: "Forfait 3",
-    className: "transform-gpu translate-y-11",
+    className: "transform-gpu md:translate-y-11",
   },
 ];
 
