@@ -100,9 +100,9 @@ const BlocMap = (props: BlocMapProps) => {
       onTouchStart={() => setEnablePreventScroll(true)}
       onTouchEnd={() => setEnablePreventScroll(false)}
     >
-      <div className="absolute top-4 left-4 py-1 px-2.5 rounded-lg bg-white/60 flex items-center gap-1 transform z-10 pointer-events-none">
-        <img className="size-10" src="/assets/images/sample.svg" alt="Sample" />
-        <p className="font-medium text-xl text-brand">Emplacement </p>
+      <div className="absolute top-2 left-2 md:top-4 md:left-4 py-1 px-2.5 rounded-lg bg-white/60 flex items-center gap-1 transform z-10 pointer-events-none">
+        <img className="size-6 lg:size-10" src="/assets/images/sample.svg" alt="Sample" />
+        <p className="font-medium text-sm sm:text-base lg:text-xl text-brand">Emplacement </p>
       </div>
 
       <div
