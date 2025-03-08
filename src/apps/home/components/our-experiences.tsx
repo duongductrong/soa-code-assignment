@@ -13,7 +13,7 @@ const OurExperiences = (props: OurExperiencesProps) => {
   return (
     <section {...props}>
       <Container className="py-15 flex flex-col gap-15">
-        <div className="flex gap-6 rounded-[0.625rem] overflow-hidden">
+        <div className="flex flex-col md:flex-row gap-6 rounded-[0.625rem] overflow-hidden">
           <div>
             <h2 className="text-5xl font-semibold leading-60 uppercase mb-15">
               <p className="text-card">Des expériences inoubliables </p>{" "}
@@ -26,7 +26,7 @@ const OurExperiences = (props: OurExperiencesProps) => {
                 height="3"
                 viewBox="0 0 83 3"
                 fill="none"
-                className="shrink-0 mt-5"
+                className="shrink-0 mt-5 hidden lg:block"
               >
                 <path
                   d="M1 1.5H82"
@@ -37,7 +37,22 @@ const OurExperiences = (props: OurExperiencesProps) => {
               </svg>
 
               <article>
-                <h2 className="mb-4 text-3xl font-semibold leading-normal capitalize">
+                <h2 className="mb-4 text-2xl md:text-[2rem] lg:text-[2.5rem] xl:text-3xl font-semibold leading-normal capitalize flex items-center items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="83"
+                    height="3"
+                    viewBox="0 0 83 3"
+                    fill="none"
+                    className="shrink-0 mt-5 block lg:hidden mr-8"
+                  >
+                    <path
+                      d="M1 1.5H82"
+                      stroke="#BBBBBB"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                   À propos de BASIC
                 </h2>
                 <p className="text-brand/80 text-lg font-normal leading-6">
@@ -57,14 +72,17 @@ const OurExperiences = (props: OurExperiencesProps) => {
           </div>
           <img
             src="/assets/images/experience-thumb.webp"
-            className="w-full h-[574px] object-cover"
+            className="w-full h-[574px] object-cover rounded-[0.625rem]"
             alt="Experience"
           />
         </div>
 
         <div className="flex flex-wrap gap-10 px-8 lg:px-0">
           {experiences.map((experience) => (
-            <div key={experience.title} className="flex-1 text-center px-8 lg:px-0">
+            <div
+              key={experience.title}
+              className="flex-1 text-center px-8 lg:px-0"
+            >
               <IconButton size="lg" className="mb-4" color="turquoise">
                 {experience.icon}
               </IconButton>
