@@ -1,6 +1,7 @@
 import Button from "@/components/ui/button";
 import Container from "@/components/ui/container";
 import ArrowUpRightIcon from "@/components/widgets/icons/arrow-up-right-icon";
+import BarIcon from "@/components/widgets/icons/bar-icon";
 import CrosshairIcon from "@/components/widgets/icons/crosshair-icon";
 import FishingIcon from "@/components/widgets/icons/fishing-icon";
 import MountainIcon from "@/components/widgets/icons/mountain-icon";
@@ -53,6 +54,11 @@ const FrontageHeader = (_props: Props) => {
             <ArrowUpRightIcon className="ml-" />
           </Button>
         </div>
+
+        <BarIcon
+          className="size-7 text-white block lg:hidden ml-auto cursor-pointer"
+          onClick={() => alert("Mobile menu not implemented yet")}
+        />
       </Container>
     </header>
   );

@@ -29,13 +29,13 @@ const BlocCard1 = ({
         className="h-[200px] md:h-[235px] lg:h-[355px] xl:h-[397px] object-cover rounded-lg"
       />
       <div className="flex flex-col items-start gap-y-1">
-        <p className="text-card text-center font-sans text-xl font-medium leading-normal mb-1">
+        <p className="text-card text-center font-sans text-xs md:text-base lg:text-lg xl:text-xl font-medium leading-normal md:mb-1">
           {subtitle}
         </p>
-        <p className="text-brand text-center font-sans text-3xl font-medium leading-[32px] mb-4">
+        <p className="text-brand text-center font-sans text-base md:text-xl lg:text-2xl xl:text-3xl font-medium md:leading-[32px] md:mb-4">
           {title}
         </p>
-        <p className="text-brand/80 font-sans text-lg font-normal leading-[24px] tracking-[-0.18px] line-clamp-2">
+        <p className="text-brand/80 font-sans text-sm md:text-base lg:text-lg font-normal md:leading-[24px] tracking-[-0.18px] line-clamp-2">
           {description}
         </p>
       </div>

@@ -16,12 +16,12 @@ const BlocTitle = ({ title, subtitle, ...props }: BlocTitleProps) => {
       )}
     >
       <span />
-      <div className="flex flex-col items-center gap-y-4 flex-1">
-        <h2 className="text-card text-center font-sans text-2xl md:text-[2.5rem] lg:text-[2.5rem] xl:text-6xl font-semibold leading-60 uppercase">
+      <div className="flex flex-col items-center md:gap-y-4 flex-1">
+        <h2 className="text-card text-center font-sans text-2xl md:text-[2.5rem] lg:text-[2.5rem] xl:text-6xl font-semibold leading-normal md:leading-60 uppercase">
           {title}
         </h2>
         {typeof subtitle === "string" ? (
-          <p className="text-brand text-center font-sans text-2xl font-normal leading-[30px] tracking-[0.25px]">
+          <p className="text-brand text-center font-sans text-sm md:text-base lg:text-lg xl:text-2xl font-normal leading-[30px] tracking-[0.25px]">
             {subtitle}
           </p>
         ) : (

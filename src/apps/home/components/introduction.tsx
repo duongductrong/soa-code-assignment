@@ -38,7 +38,7 @@ const Introduction = (props: Props) => {
                 className="flex items-center flex-col gap-3.5 grow py-6 lg:py-5"
               >
                 {activity.icon}
-                <p className="text-white text-sm text-center font-sans text-lg font-semibold leading-6 tracking-wider uppercase leading-[0.9px]">
+                <p className="text-white text-sm text-center font-sans text-base sm:text-lg font-semibold leading-6 tracking-wider uppercase leading-[0.9px]">
                   {activity.label}
                 </p>
               </div>
