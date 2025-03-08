@@ -9,7 +9,7 @@ const Label = forwardRef<
     ref={ref}
     className={cn(
       "text-brand",
-      "font-sans text-2xl font-normal leading-normal capitalize",
+      "font-sans text-base sm:text-xl lg:text-2xl font-normal leading-normal capitalize",
       "peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
       className
     )}

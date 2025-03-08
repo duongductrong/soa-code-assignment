@@ -26,7 +26,7 @@ function Calendar({
       showOutsideDays={showOutsideDays}
       ISOWeek
       className={cn(
-        "border border-brand/30 rounded-3xl px-8 py-6 shadow-calendar",
+        "border border-brand/30 rounded-3xl p-4 sm:p-6 xl:px-8 xl:py-6 shadow-calendar",
         className
       )}
       classNames={{
@@ -42,14 +42,14 @@ function Calendar({
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
-        table: "w-full border-collapse space-y-1 gap-3",
+        table: "w-full border-collapse space-y-1 gap-2 sm:gap-3",
         head_row: "flex",
         head_cell:
           "text-muted-foreground rounded-md w-8 font-normal text-[0.8rem] flex-1",
-        row: "flex w-full mt-3 gap-3",
+        row: "flex w-full mt-3 gap-2 sm:gap-3",
         cell: cn(
           "flex-1",
-          "relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected].day-range-end)]:rounded-r-md",
+          "relative p-0 text-center text-sm block focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected].day-range-end)]:rounded-r-md",
           props.mode === "range"
             ? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
             : "[&:has([aria-selected])]:rounded-md"
@@ -120,8 +120,8 @@ function Calendar({
               className={cn(
                 "flex flex-col gap-2",
                 "rounded-lg border border-calendar-border",
-                "h-18 font-normal aria-selected:opacity-100 px-4 py-2 text-brand",
-                "font-sans font-semibold text-xl leading-6 tracking-[-0.7%] text-center",
+                "h-11 sm:h-18 font-normal aria-selected:opacity-100 p-2 sm:px-4 sm:py-2 text-brand",
+                "font-sans font-semibold text-sm sm:text-xl leading-6 tracking-[-0.7%] text-center justify-center sm:justify-center items-center sm:items-center",
                 !isBusy && !outside
                   ? "bg-brand-light border border-calendar-free"
                   : "text-calendar-disabled",
@@ -141,6 +141,7 @@ function Calendar({
               {outside ? null : (
                 <span
                   className={cn(
+                    "hidden sm:block",
                     "text-center font-sans",
                     "text-lg font-normal leading-6 tracking-[-0.126px]",
                     isBusy ? "text-calendar-busy-text" : "text-calendar-free"

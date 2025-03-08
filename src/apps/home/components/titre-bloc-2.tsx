@@ -23,7 +23,7 @@ const TitreBloc2 = (props: TitreBloc2Props) => {
     >
       <Container
         {...props}
-        className={cn("py-15 min-h-[986px]", props.className)}
+        className={cn("py-8 sm:py-15 xl:min-h-[986px]", props.className)}
       >
         <BlocTitle title="Our Activities" className="mb-6 relative z-[5]" />
 

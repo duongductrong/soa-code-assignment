@@ -92,7 +92,7 @@ const BlocMap = (props: BlocMapProps) => {
       {...props}
       className={cn(
         "relative",
-        "h-[698px] w-full rounded-3xl z-[10] relative rounded-xl overflow-hidden",
+        "h-[50vw] min-[1240px]:h-[698px] w-full rounded-3xl z-[10] relative rounded-xl overflow-hidden",
         props.className
       )}
       onMouseEnter={() => setEnablePreventScroll(true)}

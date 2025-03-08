@@ -42,7 +42,9 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
         className={cn("flex flex-col gap-5", props.className)}
       >
         <div className="flex items-center gap-4">
-          <Label className="shrink-0 w-[7.5rem]">{t("Name")}:</Label>
+          <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
+            {t("Name")}:
+          </Label>
           <Field
             name="name"
             component="text"
@@ -54,7 +56,9 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Label className="shrink-0 w-[7.5rem]">{t("Email")}: </Label>
+          <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
+            {t("Email")}:{" "}
+          </Label>
           <Field
             name="email"
             type="email"
@@ -66,7 +70,9 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Label className="shrink-0 w-[7.5rem]">{t("Message")}: </Label>
+          <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
+            {t("Message")}:{" "}
+          </Label>
           <Field
             name="message"
             component="text"
@@ -77,7 +83,9 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Label className="shrink-0 w-[7.5rem]">{t("File")}: </Label>
+          <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
+            {t("File")}:{" "}
+          </Label>
           <Field
             name="file"
             component="file"
@@ -92,7 +100,7 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
             size="lg"
             corner="full"
             variant="outline"
-            className="min-w-[200px]"
+            className="w-full sm:w-fit sm:min-w-[160px] xl:min-w-[200px]"
             type="reset"
           >
             {t("Clear All")}
@@ -101,7 +109,7 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
             type="submit"
             size="lg"
             corner="full"
-            className="min-w-[200px]"
+            className="w-full sm:w-fit sm:min-w-[160px] xl:min-w-[200px]"
           >
             {t("Send")} <Send2Icon className="size-6 ml-2" />
           </Button>

@@ -8,7 +8,7 @@ export const buttonStyles = tv(
       "inline-flex items-center justify-center",
       "text-white",
       "font-sans",
-      "text-lg",
+      "text-base xl:text-lg",
       "font-medium",
       "leading-5",
       "whitespace-nowrap",

@@ -12,7 +12,7 @@ const OurSocialMedia = (props: OurSocialMediaProps) => {
     <section
       {...props}
       className={cn(
-        "bg-gradient-to-b from-cloud to-transparent min-h-[1418px] py-15",
+        "bg-gradient-to-b from-cloud to-transparent xl:min-h-[1418px] py-8 sm:py-15",
         props.className
       )}
     >

@@ -9,7 +9,7 @@ export interface OurActivitiesProps extends ComponentProps<"section"> {}
 
 const OurActivities = (props: OurActivitiesProps) => {
   return (
-    <section {...props} className={cn("py-15", props.className)}>
+    <section {...props} className={cn("py-8 sm:py-15", props.className)}>
       <Container>
         <BlocTitle title="Nos activités" className="mb-10" />
 

@@ -13,10 +13,10 @@ const Home = () => {
     <>
       <Introduction />
       <TitreBloc1 />
-      <TitreBloc2 className="mb-20" />
-      <OurActivities className="mb-20" />
+      <TitreBloc2 className="mb-10 sm:mb-20" />
+      <OurActivities className="mb-10 sm:mb-20" />
       <ExploreCookMaster />
-      <OurExperiences className="mb-20" />
+      <OurExperiences className="mb-10 sm:mb-20" />
       <OurSocialMedia />
     </>
   );

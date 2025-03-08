@@ -5,8 +5,8 @@ import { tv, VariantProps } from "tailwind-variants";
 export const inputStyles = tv(
   {
     base: [
-      "h-[3.125rem] px-4 py-3 border border-brand/30 bg-white w-full",
-      "placeholder:font-sans placeholder:text-lg placeholder:font-normal",
+      "h-10 sm:h-[3.125rem] px-4 py-2 sm:py-3 border border-brand/30 bg-white w-full",
+      "placeholder:font-sans placeholder:text-sm md:placeholder:text-base lg:placeholder:text-lg placeholder:font-normal",
       "placeholder:leading-normal placeholder:tracking-[-0.126px]",
     ],
     variants: {

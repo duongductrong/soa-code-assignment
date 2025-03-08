@@ -30,7 +30,7 @@ const Introduction = (props: Props) => {
       />
 
       <div className="absolute bottom-20 w-full h-fit">
-        <div className="max-w-base mx-auto w-full gap-8 flex items-center border-t border-t-[rgba(255, 255, 255, 0.30)]">
+        <div className="max-w-base mx-auto w-full gap-8 flex items-center border-t border-t-white/30">
           {activities.map((activity) => {
             return (
               <div

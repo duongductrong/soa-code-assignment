@@ -19,7 +19,7 @@ const ExploreCard = ({
   ...props
 }: ExploreCardProps) => {
   return (
-    <div {...props} className={cn("flex flex-col gap-y-6", className)}>
+    <div {...props} className={cn("flex flex-col gap-y-4 md:gap-y-6", className)}>
       <img
         src={image}
         loading="lazy"
@@ -27,13 +27,13 @@ const ExploreCard = ({
         className="h-[397px] object-cover rounded-lg"
       />
       <div className="flex flex-col items-start gap-y-1">
-        <small className="text-card text-center font-sans text-xl font-medium leading-normal mb-1">
+        <small className="text-card text-center font-sans text-xs md:text-base lg:text-lg xl:text-xl font-medium leading-normal md:mb-1">
           {subtitle}
         </small>
-        <h2 className="text-brand text-center font-sans text-3xl font-medium leading-[32px] mb-4">
+        <h2 className="text-brand text-center font-sans text-base md:text-xl lg:text-2xl xl:text-3xl font-medium md:leading-[32px] mb-2 md:mb-4">
           {title}
         </h2>
-        <p className="text-brand/80 font-sans text-lg font-normal leading-[24px] tracking-[-0.18px] line-clamp-2 pl-4 border-l border-grey">
+        <p className="text-brand/80 font-sans text-sm md:text-base lg:text-lg font-normal leading-[24px] tracking-[-0.18px] line-clamp-2 pl-4 border-l border-grey">
           {description}
         </p>
       </div>

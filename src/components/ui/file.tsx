@@ -49,14 +49,14 @@ const File = ({ onChange, ...props }: FileProps) => {
       />
       <label
         onClick={handleClick}
-        className="cursor-pointer text-xl font-normal text-blue font-medium flex items-center gap-1"
+        className="cursor-pointer text-base sm:text-lg lg:text-xl font-normal text-blue font-medium flex items-center gap-1"
       >
         <PaperClipIcon className="size-8 text-blue" />
         {fileName || t("Select a file")}
       </label>
 
       {props.placeholder ? (
-        <p className="text-lg font-normal text-[#999999] font-medium ml-4">
+        <p className="text-base lg:text-lg font-normal text-[#999999] font-medium ml-4">
           {props.placeholder}
         </p>
       ) : null}

@@ -12,10 +12,10 @@ export interface OurExperiencesProps extends ComponentProps<"section"> {}
 const OurExperiences = (props: OurExperiencesProps) => {
   return (
     <section {...props}>
-      <Container className="py-15 flex flex-col gap-15">
+      <Container className="py-8 sm:py-15 flex flex-col gap-15">
         <div className="flex flex-col md:flex-row gap-6 rounded-[0.625rem] overflow-hidden">
           <div>
-            <h2 className="text-5xl font-semibold leading-60 uppercase mb-15">
+            <h2 className="text-2xl md:text-[2rem] lg:text-[2.5rem] xl:text-5xl font-semibold leading-normal xl:leading-60 uppercase mb-6 lg:mb-10 xl:mb-15">
               <p className="text-card">Des expériences inoubliables </p>{" "}
               <span className="text-card/60">Lorem Ipsum truc</span>
             </h2>
@@ -37,7 +37,7 @@ const OurExperiences = (props: OurExperiencesProps) => {
               </svg>
 
               <article>
-                <h2 className="mb-4 text-2xl md:text-[2rem] lg:text-[2.5rem] xl:text-3xl font-semibold leading-normal capitalize flex items-center items-center">
+                <h2 className="mb-4 text-base sm:text-2xl md:text-[2rem] lg:text-[2.5rem] xl:text-3xl font-semibold leading-normal capitalize flex items-center items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="83"
@@ -55,7 +55,7 @@ const OurExperiences = (props: OurExperiencesProps) => {
                   </svg>
                   À propos de BASIC
                 </h2>
-                <p className="text-brand/80 text-lg font-normal leading-6">
+                <p className="text-brand/80 text-sm sm:text-base text-lg font-normal leading-6">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -81,15 +81,15 @@ const OurExperiences = (props: OurExperiencesProps) => {
           {experiences.map((experience) => (
             <div
               key={experience.title}
-              className="flex-1 text-center px-8 lg:px-0"
+              className="flex-1 text-center md:px-8 lg:px-0"
             >
               <IconButton size="lg" className="mb-4" color="turquoise">
                 {experience.icon}
               </IconButton>
-              <h3 className="text-2xl font-medium capitalize text-brand mb-2">
+              <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl font-medium capitalize text-brand mb-2">
                 {experience.title}
               </h3>
-              <p className="text-brand/80 text-lg font-normal text-brand/80">
+              <p className="text-brand/80 text-sm lg:text-base xl:text-lg font-normal text-brand/80">
                 {experience.description}
               </p>
             </div>
