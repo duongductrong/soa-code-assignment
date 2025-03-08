@@ -6,12 +6,14 @@ import App from "./apps/index.tsx";
 import "./globals.css";
 import "./lib/i18n";
 import i18n from "./lib/i18n";
+import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <I18nextProvider i18n={i18n}>
         <App />
+        <Toaster />
       </I18nextProvider>
     </BrowserRouter>
   </StrictMode>

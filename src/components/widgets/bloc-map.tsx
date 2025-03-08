@@ -8,6 +8,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "../ui/hover-card";
+import toast from "react-hot-toast";
 
 export interface BlocMapProps extends ComponentProps<"div"> {}
 
@@ -38,6 +39,13 @@ const BlocMap = (props: BlocMapProps) => {
   };
 
   const handleMapClick = (evt: MouseEvent) => {
+    if (mapRef.current?.dataset.scale !== "1") {
+      toast.error("Please zoom out to default view to adding a marker", {
+        position: "bottom-center",
+      });
+      return;
+    }
+
     const mapNode = mapRef.current;
     const rect = mapNode?.getBoundingClientRect();
 
