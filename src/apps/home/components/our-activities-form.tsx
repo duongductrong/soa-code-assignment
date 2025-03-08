@@ -6,10 +6,13 @@ import { cn } from "@/lib/tw";
 import { ComponentProps } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { usePageContext } from "../hooks";
 
 export interface OurActivitiesFormProps extends ComponentProps<"form"> {}
 
 const OurActivitiesForm = (props: OurActivitiesFormProps) => {
+  const { page } = usePageContext();
+
   const { t } = useTranslation();
   const form = useForm({
     defaultValues: {
@@ -33,6 +36,8 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
     });
   };
 
+  const content = page?.bloc_2_2;
+
   return (
     <FormProvider {...form}>
       <form
@@ -43,13 +48,13 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
       >
         <div className="flex items-center gap-4">
           <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
-            {t("Name")}:
+            {content?.btn_1?.[0] || t("Name")}:
           </Label>
           <Field
             name="name"
             component="text"
             type="text"
-            placeholder={t("Enter your name")}
+            placeholder={content?.btn_1?.[1] || t("Enter your name")}
             corner="full"
             className="w-full"
           />
@@ -57,13 +62,13 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
 
         <div className="flex items-center gap-4">
           <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
-            {t("Email")}:{" "}
+            {content?.btn_2?.[0] || t("Email")}:
           </Label>
           <Field
             name="email"
             type="email"
             component="text"
-            placeholder={t("Enter your email")}
+            placeholder={content?.btn_2?.[1] || t("Enter your email")}
             corner="full"
             className="w-full"
           />
@@ -71,12 +76,12 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
 
         <div className="flex items-center gap-4">
           <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
-            {t("Message")}:{" "}
+            {content?.btn_3 || t("Message")}:{" "}
           </Label>
           <Field
             name="message"
             component="text"
-            placeholder={t("Enter your message")}
+            placeholder={content?.btn_3 || t("Enter your message")}
             corner="full"
             className="w-full"
           />
@@ -84,12 +89,12 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
 
         <div className="flex items-center gap-4">
           <Label className="shrink-0 w-[5rem] lg:w-[6.25rem] lg:w-[7.5rem]">
-            {t("File")}:{" "}
+            {content?.btn_4?.[0] || t("File")}:{" "}
           </Label>
           <Field
             name="file"
             component="file"
-            placeholder={t("Enter your file pdf")}
+            placeholder={content?.btn_4?.[1] || t("Enter your file pdf")}
             className="w-full"
             accept="application/pdf"
           />
@@ -103,7 +108,7 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
             className="w-full sm:w-fit sm:min-w-[160px] xl:min-w-[200px]"
             type="reset"
           >
-            {t("Clear All")}
+            {content?.btn_5 || t("Clear All")}
           </Button>
           <Button
             type="submit"
@@ -111,7 +116,8 @@ const OurActivitiesForm = (props: OurActivitiesFormProps) => {
             corner="full"
             className="w-full sm:w-fit sm:min-w-[160px] xl:min-w-[200px]"
           >
-            {t("Send")} <Send2Icon className="size-6 ml-2" />
+            {content?.btn_6 || t("Send")}
+            <Send2Icon className="size-6 ml-2" />
           </Button>
         </div>
       </form>

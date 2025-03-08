@@ -4,18 +4,23 @@ import ArrowRightIcon from "@/components/widgets/icons/arrow-right-icon";
 import { cn } from "@/lib/tw";
 import { ComponentProps } from "react";
 import { useTranslation } from "react-i18next";
+import { usePageContext } from "../hooks";
 
 export interface ExploreCookMasterProps extends ComponentProps<"div"> {}
 
 const ExploreCookMaster = (props: ExploreCookMasterProps) => {
   const { t } = useTranslation();
 
+  const { page } = usePageContext();
+
+  const content = page?.bloc_4;
+
   return (
     <div {...props} className={cn(props.className)}>
       <Container>
         <div className="flex items-center justify-center md:justify-between mb-[2.8175rem]">
           <h2 className="text-card text-center text-2xl sm:text-[2rem] lg:text-[2.5rem] xl:text-5xl font-semibold leading-60 uppercase">
-            Titre
+            {content?.title}
           </h2>
           <span className="hidden md:inline-flex items-center text-gray text-xl font-medium capitalize">
             {t("Learn more")}

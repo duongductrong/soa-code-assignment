@@ -3,32 +3,35 @@ import BlocCard1 from "@/components/widgets/bloc-card-1";
 import BlocTitle from "@/components/widgets/bloc-title";
 import { cn } from "@/lib/tw";
 import { ComponentProps } from "react";
+import { usePageContext } from "../hooks";
 
 export interface TitreBloc1Props extends ComponentProps<"div"> {}
 
 const TitreBloc1 = (props: TitreBloc1Props) => {
+  const { page } = usePageContext();
+
   return (
     <Container
       {...props}
       className={cn("pt-14 pb-[6.375rem]", props.className)}
     >
       <BlocTitle
-        title="Titre Bloc 1"
-        subtitle="Sous-titre Bloc 1"
+        title={page?.bloc_1?.title}
+        subtitle={page?.bloc_1?.subtitle}
         className="mb-10"
       />
 
       <div className="flex flex-col md:flex-row gap-8 xl:gap-6">
-        {blocs.map((bloc, index) => {
+        {page?.bloc_1?.cases?.map((bloc, index) => {
           return (
             <BlocCard1
               key={index}
-              image={bloc.image}
-              title={bloc.title}
-              subtitle={bloc.subtitle}
+              image={blocs?.[index]?.image || "/assets/images/case-img-1.webp"}
+              title={bloc.tagline}
+              subtitle={bloc.category}
               description={bloc.description}
-              buttonLabel={bloc.button}
-              className={cn("flex-1", bloc.className)}
+              buttonLabel={bloc.cta}
+              className={cn("flex-1", blocs?.[index]?.className)}
             />
           );
         })}

@@ -7,10 +7,13 @@ import FishingIcon from "@/components/widgets/icons/fishing-icon";
 import MountainIcon from "@/components/widgets/icons/mountain-icon";
 import { cn } from "@/lib/tw";
 import { ComponentProps } from "react";
+import { usePageContext } from "../hooks";
 
 export interface TitreBloc2Props extends ComponentProps<typeof Container> {}
 
 const TitreBloc2 = (props: TitreBloc2Props) => {
+  const { page } = usePageContext();
+
   return (
     <div
       className={cn(
@@ -25,7 +28,7 @@ const TitreBloc2 = (props: TitreBloc2Props) => {
         {...props}
         className={cn("py-8 sm:py-15 xl:min-h-[986px]", props.className)}
       >
-        <BlocTitle title="Our Activities" className="mb-6 relative z-[5]" />
+        <BlocTitle title={page?.bloc_2.title} className="mb-6 relative z-[5]" />
 
         <div className="mt-2 flex flex-wrap justify-center items-center gap-5 mb-6 lg:py-2">
           <Button
@@ -34,7 +37,7 @@ const TitreBloc2 = (props: TitreBloc2Props) => {
             className="bg-[#FAFAFA] border-card w-fit"
           >
             <MountainIcon className="size-7 mr-2" />
-            Online Classes
+            {page?.bloc_2.cases?.[0] || "Online Classes"}
           </Button>
           <Button
             variant="outline"
@@ -42,7 +45,7 @@ const TitreBloc2 = (props: TitreBloc2Props) => {
             className="bg-[#FAFAFA] border-card w-fit"
           >
             <FishingIcon className="size-7 mr-2" />
-            Ethical Hunting
+            {page?.bloc_2.cases?.[1] || "Ethical Hunting"}
           </Button>
           <Button
             variant="outline"
@@ -50,7 +53,7 @@ const TitreBloc2 = (props: TitreBloc2Props) => {
             className="bg-[#FAFAFA] border-card w-fit"
           >
             <CrosshairIcon className="size-7 mr-2" />
-            Gastronomic Experiences
+            {page?.bloc_2.cases?.[2] || "Gastronomic Experiences"}
           </Button>
         </div>
 

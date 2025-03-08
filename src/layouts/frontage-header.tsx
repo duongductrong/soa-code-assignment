@@ -1,3 +1,4 @@
+import { usePageContext } from "@/apps/home/hooks";
 import Button from "@/components/ui/button";
 import Container from "@/components/ui/container";
 import ArrowUpRightIcon from "@/components/widgets/icons/arrow-up-right-icon";
@@ -10,12 +11,12 @@ import { cn } from "@/lib/tw";
 type Props = {};
 
 const FrontageHeader = (_props: Props) => {
-  const menuItems = [
-    { id: 1, title: "Titre 1", className: "w-[173px]" },
-    { id: 2, title: "Titre 2", className: "w-[123px]" },
-    { id: 3, title: "Titre 3", className: "w-[94px]" },
-    { id: 4, title: "Titre 4", className: "w-[35px]" },
-  ];
+  const { page } = usePageContext();
+
+  const menuItems =
+    page?.head_menu?.map((menu, id) => {
+      return { id, title: menu, className: "" };
+    }) || [];
 
   return (
     <header
@@ -27,7 +28,7 @@ const FrontageHeader = (_props: Props) => {
       )}
     >
       <Container className="flex items-center">
-        <p className="text-white font-sans text-[15px] font-bold leading-normal mr-[94px]">
+        <p className="text-white shrink-0 font-sans text-[15px] font-bold leading-normal mr-[94px]">
           LOGO SAMPLE
         </p>
 
