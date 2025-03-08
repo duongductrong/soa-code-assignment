@@ -24,6 +24,7 @@ const config = {
           light: "#FFF4F1",
         },
 
+        blue: "#1E88F9",
         card: "#F2542D",
         cloud: "#EAFCFF",
         foreground: "rgba(86, 44, 44, 0.8)",

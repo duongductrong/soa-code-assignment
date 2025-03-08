@@ -33,7 +33,10 @@ const Introduction = (props: Props) => {
         <div className="max-w-base mx-auto w-full gap-8 flex items-center border-t border-t-[rgba(255, 255, 255, 0.30)]">
           {activities.map((activity) => {
             return (
-              <div className="flex items-center flex-col gap-3.5 grow py-6 lg:py-5">
+              <div
+                key={activity.label}
+                className="flex items-center flex-col gap-3.5 grow py-6 lg:py-5"
+              >
                 {activity.icon}
                 <p className="text-white text-sm text-center font-sans text-lg font-semibold leading-6 tracking-wider uppercase leading-[0.9px]">
                   {activity.label}

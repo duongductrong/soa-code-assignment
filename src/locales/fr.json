@@ -1,5 +1,17 @@
 {
   "Welcome to React": "Bienvenue à React et react-i18next",
   "free": "Libre",
-  "busy": "Occupé"
+  "busy": "Occupé",
+  "Enter your name": "Entrez votre nom",
+  "Enter your email": "Entrez votre email",
+  "Enter your message": "Entrez votre message",
+  "Enter your file pdf": "(*fichiers pdf uniquement)",
+  "Cancel": "Annuler",
+  "Clear All": "Tout effacer",
+  "Send": "Envoyer",
+  "Name": "Nom",
+  "Email": "Email",
+  "Message": "Message",
+  "File": "Fichier",
+  "Select a file": "Sélectionner un fichier"
 }

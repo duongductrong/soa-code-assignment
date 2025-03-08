@@ -21,6 +21,7 @@ export const buttonStyles = tv(
       },
       size: {
         default: "h-10 px-4 py-2.5",
+        lg: "h-12 px-6 py-3",
       },
       corner: {
         default: "rounded-md",
