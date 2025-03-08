@@ -14,7 +14,7 @@ const Home = () => {
       <Introduction />
       <TitreBloc1 />
       <TitreBloc2 className="mb-20" />
-      <OurActivities />
+      <OurActivities className="mb-20" />
       <ExploreCookMaster />
       <OurExperiences className="mb-20" />
       <OurSocialMedia />
