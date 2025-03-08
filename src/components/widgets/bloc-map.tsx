@@ -163,7 +163,7 @@ const BlocMap = (props: BlocMapProps) => {
         ))}
 
         <img
-          src="/assets/images/bloc-map.jpg"
+          src="/assets/images/bloc-map.webp"
           alt="bloc-map"
           className="w-full h-full pointer-events-none"
         />
