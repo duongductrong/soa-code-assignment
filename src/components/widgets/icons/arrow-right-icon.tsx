@@ -8,6 +8,7 @@ const ArrowRightIcon = (props: ComponentProps<"svg">) => {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
+      {...props}
     >
       <g clip-path="url(#clip0_10576_623)">
         <path

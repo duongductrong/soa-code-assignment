@@ -1,8 +1,10 @@
 import CrosshairIcon from "@/components/widgets/icons/crosshair-icon";
 import FishingIcon from "@/components/widgets/icons/fishing-icon";
 import MountainIcon from "@/components/widgets/icons/mountain-icon";
+import { cn } from "@/lib/tw";
+import { ComponentProps } from "react";
 
-type Props = {};
+export interface IntroductionProps extends ComponentProps<"div"> {}
 
 const activities = [
   {
@@ -19,9 +21,9 @@ const activities = [
   },
 ];
 
-const Introduction = (props: Props) => {
+const Introduction = (props: IntroductionProps) => {
   return (
-    <div className="h-screen relative w-full">
+    <div {...props} className={cn("h-screen relative w-full", props.className)}>
       <img
         src="/assets/images/hero-banner.webp"
         loading="lazy"
