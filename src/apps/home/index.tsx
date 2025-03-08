@@ -1,6 +1,6 @@
 import ExploreCookMaster from "./components/explore-cookmaster";
 import Introduction from "./components/introduction";
-import OutActivities from "./components/our-activities";
+import OurActivities from "./components/our-activities";
 import OurExperiences from "./components/our-experiences";
 import OurSocialMedia from "./components/our-social-media";
 import TitreBloc1 from "./components/titre-bloc-1";
@@ -13,10 +13,10 @@ const Home = () => {
     <>
       <Introduction />
       <TitreBloc1 />
-      <TitreBloc2 />
-      <OutActivities />
+      <TitreBloc2 className="mb-20" />
+      <OurActivities />
       <ExploreCookMaster />
-      <OurExperiences />
+      <OurExperiences className="mb-20" />
       <OurSocialMedia />
     </>
   );

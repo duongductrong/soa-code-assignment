@@ -3,7 +3,7 @@ import { ComponentProps, ReactNode } from "react";
 
 export interface BlocTitleProps extends Omit<ComponentProps<"div">, "title"> {
   title: ReactNode;
-  subtitle: string | ReactNode;
+  subtitle?: string | ReactNode;
 }
 
 const BlocTitle = ({ title, subtitle, ...props }: BlocTitleProps) => {
