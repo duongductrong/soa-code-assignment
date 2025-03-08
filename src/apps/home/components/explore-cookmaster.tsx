@@ -13,18 +13,18 @@ const ExploreCookMaster = (props: ExploreCookMasterProps) => {
   return (
     <div {...props} className={cn(props.className)}>
       <Container>
-        <div className="flex items-center justify-between mb-[2.8175rem]">
-          <h2 className="text-card text-center text-5xl font-semibold leading-60 uppercase">
+        <div className="flex items-center justify-center md:justify-between mb-[2.8175rem]">
+          <h2 className="text-card text-center text-2xl sm:text-[2rem] lg:text-[2.5rem] xl:text-5xl font-semibold leading-60 uppercase">
             Titre
           </h2>
-          <span className="inline-flex items-center text-gray text-xl font-medium capitalize">
+          <span className="hidden md:inline-flex items-center text-gray text-xl font-medium capitalize">
             {t("Learn more")}
             <ArrowRightIcon className="size-6 ml-1" />
           </span>
         </div>
       </Container>
 
-      <div className="flex items-center flex-nowrap overflow-x-hidden gap-14 ml-[23.17vw]">
+      <div className="flex items-center flex-nowrap overflow-x-hidden gap-14 ml-4 sm:ml-18 md:ml-[23.17vw]">
         {data.map((data, index) => {
           return (
             <ExploreCard

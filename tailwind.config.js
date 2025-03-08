@@ -59,6 +59,8 @@ const config = {
 
         17: "4.375rem", // "70px"
 
+        18: "4.5rem", // "72px"
+
         base: "1240px",
       },
 
